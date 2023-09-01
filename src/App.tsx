@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useHelperScroll } from './utils/useHeplerSlider';
 
 function App() {
+  const ref = useRef(null);
+  const {setElement} = useHelperScroll({
+    itemGap: 20,
+    elementName: 'li',
+    marginEdge: 10
+  })
+
+  useEffect(() => {
+    setElement(ref.current)
+  }, [ref.current])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul ref={ref}>
+        <li>
+
+        </li>
+        <li>
+
+        </li>
+        <li>
+
+        </li>
+        <li>
+
+        </li>
+        <li>
+
+        </li>
+        <li>
+
+        </li>
+      </ul>
     </div>
   );
 }

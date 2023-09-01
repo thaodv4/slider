@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+
+ul {
+  overflow-x: scroll;
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  padding: 10px
+
+}
+li {
+  width: 170px;
+  flex-shrink: 0;
+  height: 300px;
+  background: red;
+}
