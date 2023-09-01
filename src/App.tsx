@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { useHelperScroll } from './utils/useHeplerSlider';
 
