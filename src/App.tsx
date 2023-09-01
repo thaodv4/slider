@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     setElement(ref.current)
-  }, [ref.current])
+  }, [ref.current, setElement])
   return (
     <div className="App">
       <ul ref={ref}>
