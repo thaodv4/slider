@@ -142,13 +142,16 @@ export const useHelperScroll = ({
   }, [isEnd, isStart])
 
   const handleScrollEnd = () => {
+    console.log("scroll")
     setScrollValue((state) => state + StepValue)
   }
   const handleTouchStart = () => {
+    console.log("touched")
     setIsEnd(false)
     setIsStart(true)
   }
   const handleTouchEnd = () => {
+    console.log("touched")
     setIsEnd(true)
     setPositionEnd(scrollValue)
   }
